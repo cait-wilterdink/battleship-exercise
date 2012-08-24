@@ -50,10 +50,13 @@ define([ "jquery" ], function($) {
 
     };
 
-    BoardController.prototype.getElement = function() {
-        return this.$element;
+    /**
+     * Get the size of a board square in pixels.
+     * @return {Number}
+     */
+    BoardController.prototype.getSquareSize = function() {
+        return this.$board.width() / cols;
     };
-
 
     return BoardController;
 });
